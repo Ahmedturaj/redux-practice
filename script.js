@@ -1,9 +1,14 @@
-const handelIncrement =()=>{
-    count++;
-}
-const decrement =()=>{
-    count--;
-}
+let count = 0;
+        const counterDisplay = document.getElementById('counter');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
 
-document.getElementById('increment').addEventListener('click',handelIncrement);
-document.getElementById('decrement').addEventListener('click',decrement);
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            counterDisplay.textContent = count;
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            count--;
+            counterDisplay.textContent = count;
+        });
